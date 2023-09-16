@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import countries from "../data";
+import { FaExchangeAlt, FaVolumeUp } from "react-icons/fa";
+import { AiFillCopy } from "react-icons/ai";
 
 const Translate = () => {
   useEffect(() => {
@@ -112,20 +114,38 @@ const Translate = () => {
           </div>
           <ul className="controls flex flex-col md:flex-row gap-5 md:gap-0">
             <li className="row from">
-              <div className="icons">
-                <i id="from" className="fas fa-volume-up"></i>
-                <i id="from" className="fas fa-copy"></i>
+              <div className="icons icons flex  gap-1 ">
+                <i
+                  id="from"
+                  className="fas fa-volume-up flex gap-1 items-center"
+                >
+                  speak <FaVolumeUp />
+                </i>
+                <i id="from" className="fas fa-copy flex gap-1 items-center">
+                  Copy
+                  <AiFillCopy />
+                </i>
               </div>
               <select></select>
             </li>
             <li className="exchange">
-              <i className="fas fa-exchange-alt">change </i>
+              <i className="fas fa-exchange-alt flex gap-1 items-center">
+                <FaExchangeAlt /> change
+              </i>
             </li>
             <li className="row to">
               <select></select>
-              <div className="icons">
-                <i id="to" className="fas fa-volume-up"></i>
-                <i id="to" className="fas fa-copy"></i>
+              <div className="icons flex gap-1">
+                <i
+                  id="to"
+                  className="fas fa-volume-up flex gap-1 items-center "
+                >
+                  speak <FaVolumeUp />
+                </i>
+                <i id="to" className="fas fa-copy flex gap-1 items-center">
+                  Copy
+                  <AiFillCopy />
+                </i>
               </div>
             </li>
           </ul>
