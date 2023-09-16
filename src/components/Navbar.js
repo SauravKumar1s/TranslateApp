@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,13 +18,19 @@ function Navbar() {
             alt="Flowbite Logo"
           />
         </Link>
+        <Link
+          to="/nepali-typing"
+          className="text-xl text-white font-bold hover:text-gray-300 mr-5"
+        >
+          NepaliTyping
+        </Link>
         {/* <button
           onClick={toggleMenu}
           className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
           aria-expanded={isMenuOpen ? 'true' : 'false'}
         >
           <span className="sr-only">Open main menu</span> */}
-          {/* <svg
+        {/* <svg
             className="w-5 h-5"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +46,6 @@ function Navbar() {
             />
           </svg> */}
         {/* </button> */}
-       
       </div>
     </nav>
   );
