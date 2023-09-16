@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import countries from "../data";
+import { FaExchangeAlt, FaVolumeUp } from "react-icons/fa";
+import { AiFillCopy } from "react-icons/ai";
 
 const Translate = () => {
   useEffect(() => {
@@ -94,13 +96,14 @@ const Translate = () => {
   return (
     <>
       <div className="container">
-        <div className="wrapper">
-          <div className="text-input">
+        <div className="wrapper ">
+          <div className="text-input flex-col md:flex-row md:min-w[700px] min-w-auto">
             <textarea
               spellCheck="false"
               className="from-text"
               placeholder="Enter text"
             ></textarea>
+            <div className="border"></div>
             <textarea
               spellCheck="false"
               readOnly
@@ -109,29 +112,48 @@ const Translate = () => {
               placeholder="Translation"
             ></textarea>
           </div>
-          <ul className="controls">
+          <ul className="controls flex flex-col md:flex-row gap-5 md:gap-0">
             <li className="row from">
-              <div className="icons">
-                <i id="from" className="fas fa-volume-up"></i>
-                <i id="from" className="fas fa-copy"></i>
+              <div className="icons icons flex  gap-1 ">
+                <i
+                  id="from"
+                  className="fas fa-volume-up flex gap-1 items-center"
+                >
+                  speak <FaVolumeUp />
+                </i>
+                <i id="from" className="fas fa-copy flex gap-1 items-center">
+                  Copy
+                  <AiFillCopy />
+                </i>
               </div>
               <select></select>
             </li>
             <li className="exchange">
-              <i className="fas fa-exchange-alt"></i>
+              <i className="fas fa-exchange-alt flex gap-1 items-center">
+                <FaExchangeAlt /> change
+              </i>
             </li>
             <li className="row to">
               <select></select>
-              <div className="icons">
-                <i id="to" className="fas fa-volume-up"></i>
-                <i id="to" className="fas fa-copy"></i>
+              <div className="icons flex gap-1">
+                <i
+                  id="to"
+                  className="fas fa-volume-up flex gap-1 items-center "
+                >
+                  speak <FaVolumeUp />
+                </i>
+                <i id="to" className="fas fa-copy flex gap-1 items-center">
+                  Copy
+                  <AiFillCopy />
+                </i>
               </div>
             </li>
           </ul>
         </div>
         <div className="flex justify-center rounded-lg">
-        <button className="bg-[#3e2890] text-xl w-2/4 py-4 text-white flex text-center justify-center rounded-lg mt-8">Translate Text</button>
-
+          <button className="bg-[#3e2890] text-xl w-2/4 py-4 text-white flex text-center justify-center rounded-lg mt-8">
+            Translate Text
+          </button>
         </div>
       </div>
     </>

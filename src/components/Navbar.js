@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,12 +11,18 @@ function Navbar() {
   return (
     <nav className="bg-[#3e2890] border-b-2 border-gray-200">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link href="" className="flex items-center">
+        <Link href="/" className="flex items-center">
           <img
             src="https://cdn.pixabay.com/photo/2021/09/20/22/15/translate-6641970_1280.png"
             className="h-16 rounded-xl mr-3"
             alt="Flowbite Logo"
           />
+        </Link>
+        <Link
+          to="/nepali-typing"
+          className="text-xl text-white font-bold hover:text-gray-300 mr-5"
+        >
+          NepaliTyping
         </Link>
         {/* <button
           onClick={toggleMenu}
@@ -24,7 +30,7 @@ function Navbar() {
           aria-expanded={isMenuOpen ? 'true' : 'false'}
         >
           <span className="sr-only">Open main menu</span> */}
-          {/* <svg
+        {/* <svg
             className="w-5 h-5"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +46,6 @@ function Navbar() {
             />
           </svg> */}
         {/* </button> */}
-       
       </div>
     </nav>
   );
